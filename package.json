@@ -1,0 +1,20 @@
+{
+  "name": "template-sass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:./css/style.css"
+  },
+  "keywords": [],
+  "author": "Quentin GEOFFROY PITAILLER",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@capacitor/core": "^5.4.2",
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^5.4.2"
+  }
+}

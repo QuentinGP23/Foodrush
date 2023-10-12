@@ -1,0 +1,11 @@
+{
+  "appId": "fr.foodrush.app",
+  "appName": "FoodRushApp",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

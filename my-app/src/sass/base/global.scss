@@ -1,0 +1,29 @@
+body{
+    margin:0;
+}
+
+a[class^="btn"]{
+    text-decoration:none;
+    border-radius:500px;
+    padding: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px, rgba(0, 0, 0, 0.04) 0px 4px 4px;
+    i{
+        margin-right:4px;
+    }
+}
+.btn1{
+    color:#fff;
+    background-color:#000;
+}
+
+.btn2{
+    color:#000;
+    background-color:#fff;
+}
+
+.sub{
+    margin:8px 0;
+    font-size:12px;
+    text-transform: uppercase;
+    color: rgb(141, 141, 141);
+}
