@@ -3,64 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <title>Foodrush</title>
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta      name="viewport"      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"    />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <script
-      type="module"
-      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
-    ></script>
+    <script      type="module"      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"    ></script>
+    <script      nomodule      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"    ></script>
 
     <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/style.css" />
     <meta name="theme-color" content="#31d53d" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="stylesheet"      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"    />
   </head>
   <body>
     <capacitor-welcome>
-        <header>
-            <div class="t">
-                <div>
-                    <p class="sub">Maintenant</p>
-                    <b>Lieu actuel</b>
-                </div>
-                <div class="account">
-                    <i class="fa-regular fa-user"></i>
-                </div>
+      <header>
+        <div class="t">
+          <div>
+            <p class="sub">Maintenant</p>
+            <b>Lieu actuel</b>
+          </div>
+          <div class="account">
+            <i class="fa-regular fa-user"></i>
+          </div>
+        </div>
+        <div class="b">
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              name="headSearch"
+              id="headSearch"
+              placeholder="restaurants, commerces, plats"
+            />
+          </div>
+          <img src="img/pictos/sliders.svg" alt="filter" />
+        </div>
+      </header>
+      <main>
+        <section class="found">
+          <h1>Savourez. Livré. Répétez.</h1>
+          <div class="search">
+            <i class="fa-solid fa-location-dot"></i
+            ><input
+              type="text"
+              name="Adrr"
+              id="Adrr"
+              placeholder="Saisissez votre adresse"
+            /><button>Rechercher</button>
+          </div>
+        </section>
+        <section class="cards">
+          <h2>En vedette</h2>
+          <div class="slider">
+            <div class="card">
+              <div class="t"></div>
+              <div class="b">
+                <b>Mali food</b>
+                <p class="note"><i class="fa-solid fa-star"></i>4.5 Excellent</p>
+              </div>
             </div>
-            <div class="b">
-                <div>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" name="headSearch" id="headSearch" placeholder="restaurants, commerces, plats">
-                </div>
-                <img src="img/pictos/sliders.svg" alt="filter">
-            </div>
-        </header>
-        <main>
-            <section class="found">
-                <h1>Savourez. Livré. Répétez.</h1>
-                <div class="search"><i class="fa-solid fa-location-dot"></i><input type="text" name="Adrr" id="Adrr" placeholder="Saisissez votre adresse"><button>Rechercher</button></div>
-            </section>
-        </main>
-        <footer>
-            <nav>
-                <div><i class="fa-solid fa-house"></i><p>Accueil</p></div>
-                <div><i class="fa-solid fa-magnifying-glass"></i><p>Parcourir</p></div>
-                <div><i class="fa-solid fa-cart-shopping"></i><p>Paniers</p></div>
-                <div><i class="fa-solid fa-user"></i><p>Compte</p></div>
-            </nav>
-        </footer>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <nav>
+          <div>
+            <i class="fa-solid fa-house"></i>
+            <p>Accueil</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p>Parcourir</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Paniers</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-user"></i>
+            <p>Compte</p>
+          </div>
+        </nav>
+      </footer>
     </capacitor-welcome>
 
-    <script src="./js/capacitor-welcome.js" type="module"></script>
+    <!-- <script src="./js/capacitor-welcome.js" type="module"></script> -->
   </body>
 </html>
