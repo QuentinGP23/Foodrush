@@ -1,14 +1,14 @@
-let prevScrollPos = window.pageYOffset;
+let prevScrollPos = window.scrollY;
 
 window.onscroll = function() {
-    const currentScrollPos = window.pageYOffset;
+    const currentScrollPos = window.scrollY;
 
-    if (prevScrollPos > currentScrollPos) {
-        // Scroll vers le haut
-        document.querySelector("header").style.top = "0";
-    } else {
-        // Scroll vers le bas
-        document.querySelector("header").style.top = "-55px";
+    if (currentScrollPos > 100) {
+        if (prevScrollPos > currentScrollPos) {
+            document.querySelector("header").style.top = "0";
+        } else {
+            document.querySelector("header").style.top = "-65px";
+        }
     }
 
     prevScrollPos = currentScrollPos;

@@ -16,6 +16,8 @@ h1 {
 h2 {
   font-size: 36px;
   margin: 16px;
+  position: relative;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -30,6 +32,7 @@ b {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
@@ -37,7 +40,10 @@ main {
 }
 
 section {
-  padding: 24px 24px 12px 24px;
+  padding: 16px 16px 8px 16px;
+}
+section::-webkit-scrollbar {
+  display: none;
 }
 
 a[class^=btn] {
@@ -48,6 +54,11 @@ a[class^=btn] {
 }
 a[class^=btn] i {
   margin-right: 4px;
+}
+
+.clickableheart.fa-solid {
+  animation-name: bounce;
+  animation-duration: 0.4s;
 }
 
 .btn1 {
@@ -67,8 +78,19 @@ a[class^=btn] i {
   color: rgb(141, 141, 141);
 }
 
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 header {
-  padding: 0 24px;
+  padding: 0 16px;
   position: fixed;
   box-sizing: border-box;
   width: 100%;
@@ -76,6 +98,8 @@ header {
   background-color: #fff;
   padding-bottom: 8px;
   transition: top 0.3s ease;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.09);
+  padding-top: 8px;
 }
 header .t {
   display: flex;
@@ -104,7 +128,7 @@ header .t .account {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: lightgrey;
+  background-color: rgb(241, 241, 241);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,23 +145,24 @@ header .b div {
 }
 header .b div i {
   position: absolute;
-  top: 10px;
+  top: 50%;
   left: 16px;
-  font-size: 16px;
+  font-size: 20px;
+  transform: translateY(-50%);
 }
 header .b div #headSearch {
   border: 0;
   background-color: rgb(241, 241, 241);
   border-radius: 12px;
-  padding: 8px 0 9px 48px;
+  padding: 10px 0 10px 48px;
   font-family: "Lato", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   width: 100%;
   box-sizing: border-box;
 }
 header img {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
 
 footer {
@@ -153,7 +178,7 @@ footer {
 footer nav {
   display: flex;
   width: 100%;
-  padding: 10px 24px;
+  padding: 10px 16px;
   justify-content: space-between;
   align-items: center;
 }
@@ -206,8 +231,24 @@ footer p {
   color: #fff;
 }
 
+h2 .voirplus {
+  position: absolute;
+  right: 0px;
+  top: 6px;
+  padding: 22px;
+  border-radius: 50%;
+  background: rgb(241, 241, 241);
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .cards {
-  overflow-x: hidden;
+  position: relative;
+  overflow-y: hidden;
 }
 .cards .slider {
   display: flex;
@@ -308,7 +349,7 @@ footer p {
 
 .cate {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: stretch;
   gap: 8px;
 }
