@@ -1,9 +1,14 @@
 body{
     margin:0;
+    min-height:100vh;
+}
+
+main{
+    margin-top: 120px;
 }
 
 section{
-    padding:24px 24px 0 24px;
+    padding:24px 24px 12px 24px;
 }
 
 a[class^="btn"]{
